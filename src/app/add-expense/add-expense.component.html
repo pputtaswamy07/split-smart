@@ -1,1 +1,20 @@
-<p>add-expense works!</p>
+<div>
+    <h2>Add Expense</h2>
+    <form (ngSubmit)="addExpense()">
+        <label>Description:</label>
+        <input type="text" [(ngModel)]="description" name="description" required>
+
+        <label>Amount:</label>
+        <input type="number" [(ngModel)]="amount" name="amount" required>
+
+        <label>Paid By:</label>
+        <input type="text" [(ngModel)]="paidBy" name="paidBy" required>
+
+        <label>Participants:</label>
+        <div *ngFor="let participant of participants">{{ participant }}</div>
+        <input type="text" [(ngModel)]="participantInput" name="participantInput">
+        <button type="button" (click)="addParticipant()">Add Participant</button>
+
+        <button type="submit">Add Expense</button>
+    </form>
+</div>

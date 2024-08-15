@@ -1,11 +1,13 @@
 import { Component, importProvidersFrom } from '@angular/core';
 import { ExpenseService } from '../services/expense.service';
 import { Expense } from '../models/expense.model';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-add-expense',
   standalone: true,
-  imports: [],
+  imports: [FormsModule, CommonModule],
   templateUrl: './add-expense.component.html',
   styleUrl: './add-expense.component.scss',
 })
